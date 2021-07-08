@@ -2,7 +2,7 @@ import React from "react";
 import uuid from "react-uuid";
 import PropTypes from "prop-types";
 
-export default function Dropdownitems({ items, selection, setSelection }) {
+export default function DropdownItems({ items, selection, setSelection }) {
   return (
     <ul style={{ paddingLeft: "0", position: "absolute" }} className="dropdown">
       {items.map((item) => {
@@ -23,9 +23,7 @@ export default function Dropdownitems({ items, selection, setSelection }) {
   );
 }
 
-Dropdownitems.propTypes = {
-  // You can declare that a prop is a specific JS primitive. By default, these
-  // are all optional.
+DropdownItems.propTypes = {
   items: PropTypes.array,
   setSelection: PropTypes.func,
   selection: PropTypes.string,

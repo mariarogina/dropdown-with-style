@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Dropdownitems from "./Dropdownitems";
+import DropdownItems from "./DropdownItems";
 import PropTypes from "prop-types";
 
 function Dropdown({ title, items }) {
@@ -16,7 +16,7 @@ function Dropdown({ title, items }) {
       </button>
 
       {open && (
-        <Dropdownitems
+        <DropdownItems
           items={items}
           selection={selection}
           setSelection={setSelection}
@@ -28,8 +28,6 @@ function Dropdown({ title, items }) {
 
 export default Dropdown;
 
-Dropdownitems.propTypes = {
-  // You can declare that a prop is a specific JS primitive. By default, these
-  // are all optional.
+Dropdown.propTypes = {
   items: PropTypes.array,
 };
