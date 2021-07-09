@@ -4,7 +4,13 @@ import PropTypes from "prop-types";
 
 export default function DropdownItems({ items, selection, setSelection }) {
   return (
-    <ul style={{ paddingLeft: "0", position: "absolute" }} className="dropdown">
+    <ul
+      style={{
+        paddingLeft: "0",
+        position: "absolute",
+      }}
+      className="dropdown"
+    >
       {items.map((item) => {
         const active = selection === item;
         const clazz = active ? "active" : "";
@@ -25,7 +31,7 @@ export default function DropdownItems({ items, selection, setSelection }) {
 DropdownItems.propTypes = {
   items: PropTypes.array,
   setSelection: PropTypes.func,
-  selection: PropTypes.string,
+  selection: PropTypes.string
 };
 
 DropdownItems.defaultProps = {
@@ -37,5 +43,5 @@ DropdownItems.defaultProps = {
     "Log Out",
   ],
   selection: "",
-  setSelection: () => {},
+  setSelection: () => {}
 };
