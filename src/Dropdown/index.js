@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import DropdownItems from "./DropdownItems";
+import DropdownItems from "../DropdownItems";
 import PropTypes from "prop-types";
 
-function Dropdown({ title, items }) {
+function Dropdown({ items }) {
   const [open, setOpen] = useState(false);
   const [selection, setSelection] = useState("");
 
@@ -30,4 +30,14 @@ export default Dropdown;
 
 Dropdown.propTypes = {
   items: PropTypes.array,
+};
+
+Dropdown.defaultProps = {
+  items: [
+    "Profile Information",
+    "Change Password",
+    "Become PRO",
+    "Help",
+    "Log Out",
+  ],
 };
