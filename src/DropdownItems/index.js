@@ -37,4 +37,5 @@ DropdownItems.defaultProps = {
     "Log Out",
   ],
   selection: "",
+  setSelection: () => {},
 };
